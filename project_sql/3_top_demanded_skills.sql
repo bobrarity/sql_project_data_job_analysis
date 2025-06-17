@@ -18,6 +18,8 @@ INNER JOIN skills_dim AS s
     ON stj.skill_id = s.skill_id
 WHERE
     jp.job_title_short = 'Data Analyst'
+    AND
+    jp.job_work_from_home IS TRUE
 GROUP BY
     s.skills
 ORDER BY
